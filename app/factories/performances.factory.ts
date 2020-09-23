@@ -52,6 +52,10 @@ const audits = (results: any) => {
     }
 }
 
+export const performanceMapper = ({ globalPerformanceScore }: any) => {
+    return { perfScore: globalPerformanceScore }
+}
+
 
 export default (results: any) => ({
     globalPerformanceScore: performanceScore(results),

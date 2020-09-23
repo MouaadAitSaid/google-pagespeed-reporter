@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        /**************************/
+        google.charts.setOnLoadCallback(drawPieChart);
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work', 11],
+                ['Eat', 2],
+                ['Commute', 2],
+                ['Watch TV', 2],
+                ['Sleep', 7]
+            ]);
+
+            var options = {
+                title: 'My Daily Activities'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body class="container">
+    <h1>Technical Test (by AIT SAID Mouaad 'aitsaidmouaadoff@gmail.com')</h1>
+    <hr>
+    <h2>Performance Score</h2>
+    <p>
+        This stat shows the performance score of www.voici.fr : <strong><%  perfScore %></strong><br>
+    <div id="gauge_div" style="width:280px; height: 140px;"></div>
+    </p>
+
+
+    <h2>Metrics</h2>
+    <p>
+        This stat shows the metrics stats distributions for www.voici.fr
+    
+    </p>
+<div id="piechart" style="width: 90px; height: 50px;"></div>
+
+
+    <h2>Audits</h2>
+    <p>
+        This stat shows audits stats by showing server response time and the speedIndex of www.voici.fr
+    </p>
+
+
+
+
+</body>
+
+</html>
